@@ -1,0 +1,90 @@
+<resources>
+    <string name="app_name">Echo</string>
+
+    <!-- Navigation -->
+    <string name="nav_today">Today</string>
+    <string name="nav_tasks">Projects</string>
+    <string name="nav_clients">Clients</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_yesterday">Yesterday</string>
+    <string name="dashboard_today">Today</string>
+    <string name="dashboard_tomorrow">Tomorrow</string>
+    <string name="dashboard_upcoming">Upcoming</string>
+    <string name="dashboard_no_tasks">No tasks</string>
+    <string name="dashboard_free">Free</string>
+    <string name="dashboard_more_tasks">+%1$d more</string>
+
+    <!-- Task Menu -->
+    <string name="task_menu_rename">Rename</string>
+    <string name="task_menu_notify">Notify Client</string>
+    <string name="task_menu_raise_priority">Raise Priority</string>
+    <string name="task_menu_lower_priority">Lower Priority</string>
+    <string name="task_menu_mark_overdue">Mark as Overdue</string>
+    <string name="task_menu_clear_overdue">Clear Overdue Mark</string>
+
+    <!-- Task Actions -->
+    <string name="task_action_delete_title">Delete Task</string>
+    <string name="task_action_delete_msg">Would you like to delete the task?</string>
+    <string name="task_action_rename_title">Rename Task</string>
+    <string name="task_action_ok">OK</string>
+    <string name="task_action_cancel">Cancel</string>
+    <string name="task_action_yes">Yes</string>
+    <string name="task_action_no">No</string>
+    <string name="task_action_toggle_complete">Toggle Complete</string>
+
+    <!-- Notify Client -->
+    <string name="notify_client_title">Notify %1$s</string>
+    <string name="notify_client_method">Message Content:</string>
+    <string name="notify_client_text">Text Message</string>
+    <string name="notify_client_email">Email</string>
+    <string name="notify_client_send">Send</string>
+    <string name="notify_client_reset">Reset to Preset</string>
+    <string name="notify_client_placeholder">Type your message here...</string>
+    <string name="notify_client_msg_complete">Hi %1$s, the task \'%2$s\' is now complete!</string>
+    <string name="notify_client_msg_overdue">Hi %1$s, just wanted to let you know that \'%2$s\' is slightly behind schedule.</string>
+    <string name="notify_client_msg_working">Hi %1$s, I\'m currently working on \'%2$s\'.</string>
+    <string name="notify_client_subject">Update: %1$s</string>
+
+    <!-- Tasks Screen -->
+    <string name="tasks_title">All Tasks</string>
+    <string name="tasks_active_header">Active Tasks</string>
+    <string name="tasks_removed_header">Recently Removed</string>
+    <string name="tasks_empty_state">No tasks found. Create a task to get started!</string>
+
+    <!-- Clients Screen -->
+    <string name="clients_add_button">Add New Client</string>
+    <string name="clients_active_projects">Active Projects: %1$d</string>
+    <string name="clients_add_dialog_title">Add Client</string>
+    <string name="clients_field_name">Name</string>
+    <string name="clients_field_email">Email</string>
+    <string name="clients_field_phone">Phone</string>
+    <string name="clients_add_dialog_confirm">Add</string>
+
+    <!-- Client Detail -->
+    <string name="client_detail_title">Client Detail</string>
+    <string name="client_detail_save">Save</string>
+    <string name="client_detail_delete">Delete Client</string>
+    <string name="client_detail_delete_msg">Are you sure you want to permanently delete this client and all their associated projects and tasks?</string>
+    <string name="client_detail_projects_header">Projects</string>
+    <string name="client_detail_add_project">Add Project</string>
+    <string name="client_detail_add_task">Add Task</string>
+    <string name="client_detail_project_name">Project Name</string>
+
+    <!-- Task Creation -->
+    <string name="task_creation_title">New Task</string>
+    <string name="task_creation_field_title">Task Title</string>
+    <string name="task_creation_field_notes">Notes (optional)</string>
+    <string name="task_creation_due_date">Due Date: %1$s</string>
+    <string name="task_creation_client_header">For Who?</string>
+    <string name="task_creation_client_name">Client Name (optional)</string>
+    <string name="task_creation_save">Save Task</string>
+
+    <!-- Settings / Backup -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_backup_header">Data Backup &amp; Restore</string>
+    <string name="settings_export_button">Export Data (Backup)</string>
+    <string name="settings_import_button">Import Data (Restore)</string>
+    <string name="settings_import_warning">Warning: Importing data will replace all your current data. Continue?</string>
+</resources>

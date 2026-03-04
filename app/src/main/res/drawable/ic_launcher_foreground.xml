@@ -1,0 +1,33 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Echo Ring 1 -->
+    <path
+        android:pathData="M54,10
+                          A44,44 0 1,1 53.9,10"
+        android:strokeColor="#38BDF8"
+        android:strokeWidth="4"
+        android:fillColor="@android:color/transparent"
+        android:strokeAlpha="0.5"/>
+
+    <!-- Echo Ring 2 -->
+    <path
+        android:pathData="M54,20
+                          A34,34 0 1,1 53.9,20"
+        android:strokeColor="#38BDF8"
+        android:strokeWidth="4"
+        android:fillColor="@android:color/transparent"
+        android:strokeAlpha="0.6"/>
+
+    <!-- Checkmark -->
+    <path
+        android:pathData="M35,55 L50,70 L78,38"
+        android:strokeWidth="8"
+        android:strokeColor="#FFFFFF"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="@android:color/transparent"/>
+</vector>
