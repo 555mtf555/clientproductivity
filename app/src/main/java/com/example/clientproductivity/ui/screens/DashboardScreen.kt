@@ -602,38 +602,67 @@ fun TaskItem(
                 )
             }
             DropdownMenu(expanded = showMenu, onDismissRequest = { showMenu = false }) {
+                // Header: project context
                 DropdownMenuItem(
-                    text = { Text(text = "Project: ${task.projectName}", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.primary, fontWeight = FontWeight.Bold) },
+                    text = {
+                        Column {
+                            Text(
+                                text = task.projectName,
+                                style = MaterialTheme.typography.labelMedium,
+                                fontWeight = FontWeight.Bold,
+                                color = MaterialTheme.colorScheme.onSurface
+                            )
+                            Text(
+                                text = task.clientName,
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
+                    },
                     onClick = { showMenu = false },
                     enabled = false
                 )
-                HorizontalDivider(Modifier, DividerDefaults.Thickness, DividerDefaults.color)
+                HorizontalDivider()
                 DropdownMenuItem(
-                    text = { Text(stringResource(R.string.task_menu_rename), fontWeight = FontWeight.Bold) },
+                    text = { Text(stringResource(R.string.task_menu_rename)) },
+                    leadingIcon = { Icon(Icons.Default.Edit, contentDescription = null) },
                     onClick = { showMenu = false; newTitle = task.title; activeAction = TaskAction.Rename }
                 )
                 DropdownMenuItem(
-                    text = { Text(stringResource(R.string.task_menu_notify), fontWeight = FontWeight.Bold) },
+                    text = { Text(stringResource(R.string.task_menu_notify)) },
+                    leadingIcon = { Icon(Icons.Default.Notifications, contentDescription = null) },
                     onClick = { showMenu = false; activeAction = TaskAction.Notify }
                 )
-                HorizontalDivider(Modifier, DividerDefaults.Thickness, DividerDefaults.color)
+                HorizontalDivider()
                 if (task.priority < 2) {
                     DropdownMenuItem(
-                        text = { Text(stringResource(R.string.task_menu_raise_priority), fontWeight = FontWeight.Bold) },
+                        text = { Text(stringResource(R.string.task_menu_raise_priority)) },
                         leadingIcon = { Icon(Icons.Default.ArrowUpward, contentDescription = null) },
                         onClick = { showMenu = false; actions.updatePriority(task.toTaskEntity(), task.priority + 1) }
                     )
                 }
                 if (task.priority > 0) {
                     DropdownMenuItem(
-                        text = { Text(stringResource(R.string.task_menu_lower_priority), fontWeight = FontWeight.Bold) },
+                        text = { Text(stringResource(R.string.task_menu_lower_priority)) },
                         leadingIcon = { Icon(Icons.Default.ArrowDownward, contentDescription = null) },
                         onClick = { showMenu = false; actions.updatePriority(task.toTaskEntity(), task.priority - 1) }
                     )
                 }
                 DropdownMenuItem(
-                    text = { Text(if (task.blocked) stringResource(R.string.task_menu_clear_overdue) else stringResource(R.string.task_menu_mark_overdue), fontWeight = FontWeight.Bold) },
-                    leadingIcon = { Icon(Icons.Default.Flag, contentDescription = null) },
+                    text = {
+                        Text(
+                            if (task.blocked) stringResource(R.string.task_menu_clear_overdue)
+                            else stringResource(R.string.task_menu_mark_overdue),
+                            color = if (task.blocked) MaterialTheme.colorScheme.error else LocalContentColor.current
+                        )
+                    },
+                    leadingIcon = {
+                        Icon(
+                            Icons.Default.Flag,
+                            contentDescription = null,
+                            tint = if (task.blocked) MaterialTheme.colorScheme.error else LocalContentColor.current
+                        )
+                    },
                     onClick = { showMenu = false; actions.onToggleOverdue(task.toTaskEntity()) }
                 )
             }
